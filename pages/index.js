@@ -7,10 +7,20 @@ import ProductContent from "@/components/ProductContent";
 function index() {
   const [selected, setSelected] = useState("Category");
   const [cart, setCart] = useState([2]);
+  const [screenSize, setScreenSize] = useState();
 
   const handleDropDown = (e) => {
     setSelected(e.target.value);
   };
+
+  useEffect(() => {
+    window.addEventListener("resize", () => setScreenSize(window.innerWidth));
+    return () =>
+      window.removeEventListener("resize", () => console.log("resize removed"));
+  });
+  useEffect(() => {
+    setScreenSize(window.innerWidth);
+  }, []);
 
   return (
     <div>
@@ -18,10 +28,10 @@ function index() {
         selected={selected}
         handleDropDown={handleDropDown}
         cart={cart}
-        setCart={setCart}
+        screenSize={screenSize}
       />
       <ContentHeader />
-      <ProductContent />
+      <ProductContent screenSize={screenSize} />
     </div>
   );
 }
