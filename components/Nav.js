@@ -78,7 +78,7 @@ const Nav = ({ selected, handleDropDown, cart, screenSize }) => {
                 id="dropdown"
                 onChange={handleDropDown}
                 value={selected}
-                className="flex items-center justify-center w-24 bg-white"
+                className="flex items-center justify-center w-24 bg-white hover:cursor-pointer hover:underline "
               >
                 <option value="custom" hidden className="text-center">
                   CATEGORY
@@ -86,9 +86,13 @@ const Nav = ({ selected, handleDropDown, cart, screenSize }) => {
                 <option value="GELLWATCH GEN 1">GELLWATCH GEN 1</option>
                 <option value="GELLWATCH GEN X">GELLWATCH GEN X</option>
               </select>
-              <div>DEALS</div>
-              <div>DELIVERY</div>
-              <div>CONTACT</div>
+              <div className="hover:cursor-pointer hover:underline ">DEALS</div>
+              <div className="hover:cursor-pointer hover:underline ">
+                DELIVERY
+              </div>
+              <div className="hover:cursor-pointer hover:underline ">
+                CONTACT
+              </div>
             </div>
           </div>
           <div className="flex gap-5 items-center">

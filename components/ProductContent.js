@@ -103,7 +103,7 @@ function ProductContent({ screenSize }) {
             <div className="w-72 bg-black text-white text-center rounded-full font-semibold py-1 hover:bg-white hover:text-black hover:border-2 hover:border-black hover:cursor-pointer">
               BUY
             </div>
-            <div className="w-35px h-35px rounded-full p-2 border-2 border-black text-sm flex items-center justify-center">
+            <div className="w-35px h-35px rounded-full p-2 border-2 border-black text-sm flex items-center justify-center hover:cursor-pointer hover:border-blue-500">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
